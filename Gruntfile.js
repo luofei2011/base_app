@@ -24,16 +24,16 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'css/less/',
+                    cwd: 'static/css/less/',
                     src: ['*.less'],
-                    dest: 'css/',
+                    dest: 'static/css/',
                     ext: '.css'
                 }]
             }
         },
         watch: {
             style: {
-                files: ['css/less/*.less'],
+                files: ['static/css/less/*.less'],
                 tasks: ['less', 'autoprefixer'],
                 options: {
                     nospawn: true,
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 }
             },
             script: {
-                files: ['js/tpl/*.js'],
+                files: ['static/js/tpl/*.js'],
                 tasks: ['react'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -64,9 +64,9 @@ module.exports = function(grunt) {
             dev: {
                 files: [{
                     expand: true,
-                    cwd: 'js/tpl/',
+                    cwd: 'static/js/tpl/',
                     src: ['*.js'],
-                    dest: 'build/',
+                    dest: 'static/build/',
                     ext: '.js'
                 }]
             }
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                 options: {
                     browsers: ['last 2 versions', 'ie 8', 'ie 9']
                 },
-                src: 'css/*.css'
+                src: 'static/css/*.css'
             }
         }
     });
