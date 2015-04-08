@@ -52,6 +52,12 @@ module.exports = function(grunt) {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
+            },
+            php: {
+                files: ['**/*.php'],
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
             }
         },
         react: {
